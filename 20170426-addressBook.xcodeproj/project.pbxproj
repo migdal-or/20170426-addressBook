@@ -7,25 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84326FEF1EB227FD00DE207F /* ADBContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 84326FEE1EB227FD00DE207F /* ADBContact.m */; };
+		84326FF41EB2288C00DE207F /* ADBAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 84326FF31EB2288C00DE207F /* ADBAddressBook.m */; };
+		84326FF71EB22B7400DE207F /* ADBBookLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 84326FF61EB22B7400DE207F /* ADBBookLoader.m */; };
 		8439B1E91EB1252600C1FF89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B1E81EB1252600C1FF89 /* main.m */; };
 		8439B1EC1EB1252600C1FF89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B1EB1EB1252600C1FF89 /* AppDelegate.m */; };
-		8439B1EF1EB1252600C1FF89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B1EE1EB1252600C1FF89 /* ViewController.m */; };
-		8439B1F21EB1252600C1FF89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439B1F01EB1252600C1FF89 /* Main.storyboard */; };
 		8439B1F41EB1252600C1FF89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8439B1F31EB1252600C1FF89 /* Assets.xcassets */; };
-		8439B1F71EB1252600C1FF89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439B1F51EB1252600C1FF89 /* LaunchScreen.storyboard */; };
+		8439B2031EB1258000C1FF89 /* ADBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B2021EB1258000C1FF89 /* ADBViewController.m */; };
+		8439B2071EB1263800C1FF89 /* ADBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B2061EB1263800C1FF89 /* ADBTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84326FED1EB227FD00DE207F /* ADBContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBContact.h; sourceTree = "<group>"; };
+		84326FEE1EB227FD00DE207F /* ADBContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBContact.m; sourceTree = "<group>"; };
+		84326FF21EB2288C00DE207F /* ADBAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBAddressBook.h; sourceTree = "<group>"; };
+		84326FF31EB2288C00DE207F /* ADBAddressBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBAddressBook.m; sourceTree = "<group>"; };
+		84326FF51EB22B7400DE207F /* ADBBookLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBBookLoader.h; sourceTree = "<group>"; };
+		84326FF61EB22B7400DE207F /* ADBBookLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBBookLoader.m; sourceTree = "<group>"; };
 		8439B1E41EB1252600C1FF89 /* 20170426-addressBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20170426-addressBook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8439B1E81EB1252600C1FF89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8439B1EA1EB1252600C1FF89 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8439B1EB1EB1252600C1FF89 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8439B1ED1EB1252600C1FF89 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8439B1EE1EB1252600C1FF89 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8439B1F11EB1252600C1FF89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8439B1F31EB1252600C1FF89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8439B1F61EB1252600C1FF89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8439B1F81EB1252600C1FF89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8439B2011EB1258000C1FF89 /* ADBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBViewController.h; sourceTree = "<group>"; };
+		8439B2021EB1258000C1FF89 /* ADBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBViewController.m; sourceTree = "<group>"; };
+		8439B2051EB1263800C1FF89 /* ADBTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBTableViewController.h; sourceTree = "<group>"; };
+		8439B2061EB1263800C1FF89 /* ADBTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84326FF01EB2286700DE207F /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				84326FED1EB227FD00DE207F /* ADBContact.h */,
+				84326FEE1EB227FD00DE207F /* ADBContact.m */,
+			);
+			name = Contact;
+			sourceTree = "<group>";
+		};
+		84326FF11EB2286F00DE207F /* AddressBook */ = {
+			isa = PBXGroup;
+			children = (
+				84326FF21EB2288C00DE207F /* ADBAddressBook.h */,
+				84326FF31EB2288C00DE207F /* ADBAddressBook.m */,
+				84326FF81EB22C7E00DE207F /* Loader */,
+			);
+			name = AddressBook;
+			sourceTree = "<group>";
+		};
+		84326FF81EB22C7E00DE207F /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				84326FF51EB22B7400DE207F /* ADBBookLoader.h */,
+				84326FF61EB22B7400DE207F /* ADBBookLoader.m */,
+			);
+			name = Loader;
+			sourceTree = "<group>";
+		};
 		8439B1DB1EB1252600C1FF89 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +94,11 @@
 		8439B1E61EB1252600C1FF89 /* 20170426-addressBook */ = {
 			isa = PBXGroup;
 			children = (
+				8439B2001EB1255A00C1FF89 /* View */,
+				8439B1FE1EB1254C00C1FF89 /* Model */,
 				8439B1EA1EB1252600C1FF89 /* AppDelegate.h */,
 				8439B1EB1EB1252600C1FF89 /* AppDelegate.m */,
-				8439B1ED1EB1252600C1FF89 /* ViewController.h */,
-				8439B1EE1EB1252600C1FF89 /* ViewController.m */,
-				8439B1F01EB1252600C1FF89 /* Main.storyboard */,
 				8439B1F31EB1252600C1FF89 /* Assets.xcassets */,
-				8439B1F51EB1252600C1FF89 /* LaunchScreen.storyboard */,
 				8439B1F81EB1252600C1FF89 /* Info.plist */,
 				8439B1E71EB1252600C1FF89 /* Supporting Files */,
 			);
@@ -77,6 +111,42 @@
 				8439B1E81EB1252600C1FF89 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8439B1FE1EB1254C00C1FF89 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84326FF11EB2286F00DE207F /* AddressBook */,
+				84326FF01EB2286700DE207F /* Contact */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8439B2001EB1255A00C1FF89 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8439B2041EB1260C00C1FF89 /* NavigationController */,
+				8439B2081EB1268B00C1FF89 /* TableViewController */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8439B2041EB1260C00C1FF89 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				8439B2011EB1258000C1FF89 /* ADBViewController.h */,
+				8439B2021EB1258000C1FF89 /* ADBViewController.m */,
+			);
+			name = NavigationController;
+			sourceTree = "<group>";
+		};
+		8439B2081EB1268B00C1FF89 /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8439B2051EB1263800C1FF89 /* ADBTableViewController.h */,
+				8439B2061EB1263800C1FF89 /* ADBTableViewController.m */,
+			);
+			name = TableViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8439B1F71EB1252600C1FF89 /* LaunchScreen.storyboard in Resources */,
 				8439B1F41EB1252600C1FF89 /* Assets.xcassets in Resources */,
-				8439B1F21EB1252600C1FF89 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,32 +218,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8439B1EF1EB1252600C1FF89 /* ViewController.m in Sources */,
 				8439B1EC1EB1252600C1FF89 /* AppDelegate.m in Sources */,
+				8439B2071EB1263800C1FF89 /* ADBTableViewController.m in Sources */,
 				8439B1E91EB1252600C1FF89 /* main.m in Sources */,
+				84326FF71EB22B7400DE207F /* ADBBookLoader.m in Sources */,
+				84326FEF1EB227FD00DE207F /* ADBContact.m in Sources */,
+				8439B2031EB1258000C1FF89 /* ADBViewController.m in Sources */,
+				84326FF41EB2288C00DE207F /* ADBAddressBook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		8439B1F01EB1252600C1FF89 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8439B1F11EB1252600C1FF89 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8439B1F51EB1252600C1FF89 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8439B1F61EB1252600C1FF89 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8439B1F91EB1252600C1FF89 /* Debug */ = {
@@ -311,6 +364,7 @@
 				8439B1FD1EB1252600C1FF89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
