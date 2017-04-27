@@ -21,7 +21,7 @@
     ADBViewController *navigationController = [[ADBViewController alloc] init];
     UIWindow *window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     window.rootViewController = navigationController;
-    self.window = window;
+    self.window = window; 
     [window makeKeyAndVisible];
     
     return YES;
