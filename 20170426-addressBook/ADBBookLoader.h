@@ -6,8 +6,11 @@
 //  Copyright © 2017 Admin. All rights reserved.
 //
 
+#import "ADBAddressBook.h"
 #import <Foundation/Foundation.h>
 
 @interface ADBBookLoader : NSObject
+
+-(ADBAddressBook*) LoadContactsFromStub;
 
 @end

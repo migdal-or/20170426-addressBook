@@ -10,6 +10,8 @@
 		84326FEF1EB227FD00DE207F /* ADBContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 84326FEE1EB227FD00DE207F /* ADBContact.m */; };
 		84326FF41EB2288C00DE207F /* ADBAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 84326FF31EB2288C00DE207F /* ADBAddressBook.m */; };
 		84326FF71EB22B7400DE207F /* ADBBookLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 84326FF61EB22B7400DE207F /* ADBBookLoader.m */; };
+		84326FFD1EB239BA00DE207F /* ADBCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84326FFC1EB239BA00DE207F /* ADBCellTableViewCell.m */; };
+		843270001EB23A4700DE207F /* ADBAvatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 84326FFF1EB23A4700DE207F /* ADBAvatar.m */; };
 		8439B1E91EB1252600C1FF89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B1E81EB1252600C1FF89 /* main.m */; };
 		8439B1EC1EB1252600C1FF89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B1EB1EB1252600C1FF89 /* AppDelegate.m */; };
 		8439B1F41EB1252600C1FF89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8439B1F31EB1252600C1FF89 /* Assets.xcassets */; };
@@ -24,6 +26,10 @@
 		84326FF31EB2288C00DE207F /* ADBAddressBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBAddressBook.m; sourceTree = "<group>"; };
 		84326FF51EB22B7400DE207F /* ADBBookLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBBookLoader.h; sourceTree = "<group>"; };
 		84326FF61EB22B7400DE207F /* ADBBookLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBBookLoader.m; sourceTree = "<group>"; };
+		84326FFB1EB239BA00DE207F /* ADBCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBCellTableViewCell.h; sourceTree = "<group>"; };
+		84326FFC1EB239BA00DE207F /* ADBCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBCellTableViewCell.m; sourceTree = "<group>"; };
+		84326FFE1EB23A4700DE207F /* ADBAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBAvatar.h; sourceTree = "<group>"; };
+		84326FFF1EB23A4700DE207F /* ADBAvatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBAvatar.m; sourceTree = "<group>"; };
 		8439B1E41EB1252600C1FF89 /* 20170426-addressBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20170426-addressBook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8439B1E81EB1252600C1FF89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8439B1EA1EB1252600C1FF89 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,7 +67,6 @@
 			children = (
 				84326FF21EB2288C00DE207F /* ADBAddressBook.h */,
 				84326FF31EB2288C00DE207F /* ADBAddressBook.m */,
-				84326FF81EB22C7E00DE207F /* Loader */,
 			);
 			name = AddressBook;
 			sourceTree = "<group>";
@@ -73,6 +78,24 @@
 				84326FF61EB22B7400DE207F /* ADBBookLoader.m */,
 			);
 			name = Loader;
+			sourceTree = "<group>";
+		};
+		84326FF91EB236FF00DE207F /* Avatar */ = {
+			isa = PBXGroup;
+			children = (
+				84326FFE1EB23A4700DE207F /* ADBAvatar.h */,
+				84326FFF1EB23A4700DE207F /* ADBAvatar.m */,
+			);
+			name = Avatar;
+			sourceTree = "<group>";
+		};
+		84326FFA1EB2371000DE207F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				84326FFB1EB239BA00DE207F /* ADBCellTableViewCell.h */,
+				84326FFC1EB239BA00DE207F /* ADBCellTableViewCell.m */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		8439B1DB1EB1252600C1FF89 = {
@@ -116,6 +139,7 @@
 		8439B1FE1EB1254C00C1FF89 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				84326FF81EB22C7E00DE207F /* Loader */,
 				84326FF11EB2286F00DE207F /* AddressBook */,
 				84326FF01EB2286700DE207F /* Contact */,
 			);
@@ -125,6 +149,8 @@
 		8439B2001EB1255A00C1FF89 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				84326FFA1EB2371000DE207F /* Cell */,
+				84326FF91EB236FF00DE207F /* Avatar */,
 				8439B2041EB1260C00C1FF89 /* NavigationController */,
 				8439B2081EB1268B00C1FF89 /* TableViewController */,
 			);
@@ -221,9 +247,11 @@
 				8439B1EC1EB1252600C1FF89 /* AppDelegate.m in Sources */,
 				8439B2071EB1263800C1FF89 /* ADBTableViewController.m in Sources */,
 				8439B1E91EB1252600C1FF89 /* main.m in Sources */,
+				84326FFD1EB239BA00DE207F /* ADBCellTableViewCell.m in Sources */,
 				84326FF71EB22B7400DE207F /* ADBBookLoader.m in Sources */,
 				84326FEF1EB227FD00DE207F /* ADBContact.m in Sources */,
 				8439B2031EB1258000C1FF89 /* ADBViewController.m in Sources */,
+				843270001EB23A4700DE207F /* ADBAvatar.m in Sources */,
 				84326FF41EB2288C00DE207F /* ADBAddressBook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

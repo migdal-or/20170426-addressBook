@@ -7,9 +7,12 @@
 //
 
 #import "ADBTableViewController.h"
+#import "ADBAddressBook.h"
+#import "ADBBookLoader.h"
 
 @interface ADBTableViewController ()
 
+@property (nonatomic, strong) ADBAddressBook* addressBook;
 @end
 
 @implementation ADBTableViewController
@@ -17,10 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.addressBook = [[ADBBookLoader new] LoadContactsFromStub];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     
 }
 #pragma mark - Table view data source
@@ -31,8 +33,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+//#warning Incomplete implementation, return the number of rows
+    return self.addressBook.addressBook.count;
 }
 
 /*
