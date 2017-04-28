@@ -20,5 +20,14 @@
 -(void) addContactToBook: (ADBContact*) contactToAdd {
     [self.addressBook addObject: contactToAdd];
 }
+
+-(ADBContact *) objectAtIndex:(NSUInteger)index {
+    return _addressBook[index];
+}
+
+- (ADBContact*)objectAtIndexedSubscript:(NSUInteger)index {
+    return self.addressBook[index];
+}
+
 @end
 

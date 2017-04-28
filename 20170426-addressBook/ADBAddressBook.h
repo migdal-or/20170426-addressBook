@@ -15,5 +15,7 @@
 
 -(instancetype) initWithArray: (NSMutableArray* ) start;
 -(void) addContactToBook: (ADBContact*) contactToAdd;
+-(ADBContact *) objectAtIndex:(NSUInteger)index;
+-(ADBContact*)objectAtIndexedSubscript:(NSUInteger)index;
 
 @end

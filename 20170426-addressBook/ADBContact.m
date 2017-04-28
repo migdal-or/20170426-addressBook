@@ -10,6 +10,6 @@
 
 @implementation ADBContact
 
-
+//@synthesize firstName, lastName, phoneNumber, group;
 
 @end

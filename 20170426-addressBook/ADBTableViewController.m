@@ -9,6 +9,7 @@
 #import "ADBTableViewController.h"
 #import "ADBAddressBook.h"
 #import "ADBBookLoader.h"
+#import "ADBCellTableViewCell.h"
 
 @interface ADBTableViewController ()
 
@@ -24,28 +25,30 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
+    [self.tableView registerClass:[ADBCellTableViewCell class] forCellReuseIdentifier:	CBContactCellIdentifier];
+    
 }
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete implementation, return the number of rows
     return self.addressBook.addressBook.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = (ADBCellTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CBContactCellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    if (nil == cell) {
+        cell = [[ADBCellTableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier: CBContactCellIdentifier];
+    }
+    
+    [(ADBCellTableViewCell *) cell addContact: [self.addressBook objectAtIndex: indexPath.row]];
     
     return cell;
 }
-*/
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50;
+}
 
 
 @end

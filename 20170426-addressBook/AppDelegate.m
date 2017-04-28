@@ -15,7 +15,6 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     ADBViewController *navigationController = [[ADBViewController alloc] init];

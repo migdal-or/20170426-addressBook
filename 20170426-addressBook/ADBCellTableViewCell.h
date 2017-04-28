@@ -8,11 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "ADBAvatar.h"
+#import "ADBContact.h"
+
+extern NSString *const CBContactCellIdentifier;
+
+@class ADBContact;
 
 @interface ADBCellTableViewCell : UITableViewCell
 
-@property(nonatomic, strong) UILabel *firstNameLabel;
-@property(nonatomic, strong) UILabel *lastNameLabel;
-@property(nonatomic, strong) ADBAvatar *avatarView;
+//@property(nonatomic, strong) UILabel *firstNameLabel;
+//@property(nonatomic, strong) UILabel *lastNameLabel;
+//@property(nonatomic, strong) ADBAvatar *avatarView;
 
+-(void) addContact: (ADBContact *) contact;
++ (CGFloat)heightForCell;
 @end
