@@ -41,7 +41,10 @@
         cell = [[ADBCellTableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier: CBContactCellIdentifier];
     }
     
-    [(ADBCellTableViewCell *) cell addContact: (ADBContact*) [self.addressBook objectAtIndexedSubscript: indexPath.row]];
+    NSUInteger cellRow = indexPath.row;
+    ADBContact * contactToAdd = (ADBContact *) [self.addressBook objectAtIndexedSubscript: cellRow];
+    
+    [(ADBCellTableViewCell *) cell addContact: (ADBContact *) contactToAdd];
     
     return cell;
 }

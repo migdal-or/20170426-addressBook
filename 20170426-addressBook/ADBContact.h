@@ -13,6 +13,6 @@
 @property (nonatomic, copy) NSString * firstName;
 @property (nonatomic, copy) NSString * lastName;
 @property (nonatomic, copy) NSString * phoneNumber;
-@property (nonatomic, copy) NSString * group;
+@property (nonatomic, copy) NSString * email;
 
 @end

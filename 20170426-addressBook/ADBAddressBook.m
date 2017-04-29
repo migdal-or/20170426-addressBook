@@ -15,29 +15,26 @@
 
 @end
 
-
 @implementation ADBAddressBook
 
 -(instancetype) initWithArray: (NSMutableArray<ADBContact *> * ) start {
     self = [super init];
-
-    if (self) { _addressBook = start; }
+    if (self) {
+        _addressBook = start;
+    }
+    
     return self;
 }
 
 -(NSUInteger) count {
-    return 5;   //[self.addressBook count];
+    return [self.addressBook count];
 }
 
 //-(void) addContactToBook: (ADBContact*) contactToAdd {
 //    [self.addressBook addObject: contactToAdd];
 //}
 
--(ADBContact *) objectAtIndex:(NSUInteger)index {
-    return _addressBook[index];
-}
-
-- (ADBContact*)objectAtIndexedSubscript:(NSUInteger)index {
+- (ADBContact *)objectAtIndexedSubscript:(NSUInteger)index {
     return self.addressBook[index];
 }
 

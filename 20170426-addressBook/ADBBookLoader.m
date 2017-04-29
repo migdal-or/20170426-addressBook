@@ -13,24 +13,34 @@
 @implementation ADBBookLoader
 
 -(ADBAddressBook*) LoadContactsFromStub {
-        ADBAddressBook *book = [ADBAddressBook new];
-
-    NSMutableArray* stub = @[ @[@"Mivaequi",@"Tiboigee",@"+86469496458",@"Mivaequi.Tiboigee@gmail.com"],
-                              @[@"phuwohdi",@"quinguos",@"+96896544346",@""                           ],
-                              @[@"ahpaeshe",@"eekonoog",@"",            @"eekonoog@ojohchau.edu"      ],
-                              @[@"uphohvak",@"soengaev",@"+29395987342",@"soengaev@ya.ru"             ],
-                              @[@"agheepoo",@"kothaeka",@"+84628799628",@""                           ] ];
+    ADBAddressBook *book = [ADBAddressBook new];
+    
+    ADBContact * (^addContact)(NSString *, NSString *, NSString *, NSString *);
+    addContact = ^ADBContact*(NSString *firstName, NSString *lastName, NSString *phoneNumber, NSString *email) {
+        ADBContact * newContact = [ADBContact new];
+        newContact.firstName = firstName;
+        newContact.lastName = lastName;
+        newContact.phoneNumber = phoneNumber;
+        newContact.email = email;
+        return newContact;
+    };
+    
+    NSArray* stub = @[ addContact(@"Mivaequi",@"Tiboigee",@"+86469496458",@"Mivaequi.Tiboigee@gmail.com"),
+                              addContact(@"phuwohdi",@"quinguos",@"+96896544346",@""                           ),
+                              addContact(@"ahpaeshe",@"eekonoog",@"",            @"eekonoog@ojohchau.edu"      ),
+                              addContact(@"uphohvak",@"soengaev",@"+29395987342",@"soengaev@ya.ru"             ),
+                              addContact(@"agheepoo",@"kothaeka",@"+84628799628",@""                           ) ];
     
     return [[ADBAddressBook alloc] initWithArray: stub];
     
     
-//    [book addContactToBook: @[@"Mivaequi",@"Tiboigee",@"+86469496458",@"Mivaequi.Tiboigee@gmail.com"] ];
-//    [book addContactToBook: @[@"phuwohdi",@"quinguos",@"+96896544346",@""                           ] ];
-//    [book addContactToBook: @[@"ahpaeshe",@"eekonoog",@"",            @"eekonoog@ojohchau.edu"      ] ];
-//    [book addContactToBook: @[@"uphohvak",@"soengaev",@"+29395987342",@"soengaev@ya.ru"             ] ];
-//    [book addContactToBook: @[@"agheepoo",@"kothaeka",@"+84628799628",@""                           ] ];
-//    
-//    return book;
+    //    [book addContactToBook: @[@"Mivaequi",@"Tiboigee",@"+86469496458",@"Mivaequi.Tiboigee@gmail.com"] ];
+    //    [book addContactToBook: @[@"phuwohdi",@"quinguos",@"+96896544346",@""                           ] ];
+    //    [book addContactToBook: @[@"ahpaeshe",@"eekonoog",@"",            @"eekonoog@ojohchau.edu"      ] ];
+    //    [book addContactToBook: @[@"uphohvak",@"soengaev",@"+29395987342",@"soengaev@ya.ru"             ] ];
+    //    [book addContactToBook: @[@"agheepoo",@"kothaeka",@"+84628799628",@""                           ] ];
+    //
+    //    return book;
     
 }
 @end
