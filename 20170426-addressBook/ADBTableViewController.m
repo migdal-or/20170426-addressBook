@@ -47,11 +47,13 @@
     
     [(ADBCellTableViewCell *) cell addContact: (ADBContact *) contactToAdd];
     
+    [cell layer].borderWidth = 1.0f;
+    
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 50;
+    return 20*(1+indexPath.row);
 }
 
 

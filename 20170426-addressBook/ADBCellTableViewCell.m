@@ -53,7 +53,7 @@ NSString *const CBContactCellIdentifier = @"CBContactCellIdentifier";
     
     [self.firstNameLabel sizeToFit];
     [self.lastNameLabel sizeToFit];
-    
+
     [self.firstNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo([[NSNumber alloc] initWithInt:0]);
         make.left.equalTo([[NSNumber alloc] initWithInt:0]);
@@ -68,8 +68,8 @@ NSString *const CBContactCellIdentifier = @"CBContactCellIdentifier";
     //сюда надо дописать генерацию аватарки
 }
 
-+ (CGFloat)heightForCell {
-    return 10;
-}
+//+ (CGFloat)heightForCell {
+//    return 10;
+//}
 
 @end

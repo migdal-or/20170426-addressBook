@@ -21,5 +21,5 @@ extern NSString *const CBContactCellIdentifier;
 //@property(nonatomic, strong) ADBAvatar *avatarView;
 
 -(void) addContact: (ADBContact *) contact;
-+ (CGFloat)heightForCell;
+//+ (CGFloat)heightForCell;
 @end
