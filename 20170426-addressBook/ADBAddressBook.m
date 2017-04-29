@@ -9,17 +9,29 @@
 #import "ADBAddressBook.h"
 #import "ADBContact.h"
 
+@interface ADBAddressBook ()
+
+@property(nonatomic, copy, readwrite) NSMutableArray *addressBook;
+
+@end
+
+
 @implementation ADBAddressBook
 
--(instancetype) initWithArray: (NSMutableArray * ) start {
+-(instancetype) initWithArray: (NSMutableArray<ADBContact *> * ) start {
     self = [super init];
-    _addressBook = start;
+
+    if (self) { _addressBook = start; }
     return self;
 }
 
--(void) addContactToBook: (ADBContact*) contactToAdd {
-    [self.addressBook addObject: contactToAdd];
+-(NSUInteger) count {
+    return 5;   //[self.addressBook count];
 }
+
+//-(void) addContactToBook: (ADBContact*) contactToAdd {
+//    [self.addressBook addObject: contactToAdd];
+//}
 
 -(ADBContact *) objectAtIndex:(NSUInteger)index {
     return _addressBook[index];

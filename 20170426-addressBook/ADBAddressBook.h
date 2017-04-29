@@ -9,13 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "ADBContact.h"
 
+@class ADBContact;
+
 @interface ADBAddressBook : NSObject
 
-@property (nonatomic, copy) NSMutableArray * addressBook;
+//@property (nonatomic, copy) NSMutableArray * addressBook;
 
 -(instancetype) initWithArray: (NSMutableArray* ) start;
--(void) addContactToBook: (ADBContact*) contactToAdd;
--(ADBContact *) objectAtIndex:(NSUInteger)index;
--(ADBContact*)objectAtIndexedSubscript:(NSUInteger)index;
+//-(void) addContactToBook: (ADBContact*) contactToAdd;
+//-(ADBContact *) objectAtIndex: (NSUInteger) index;
+-(ADBContact *) objectAtIndexedSubscript: (NSUInteger) index;
+-(NSUInteger) count;
 
 @end

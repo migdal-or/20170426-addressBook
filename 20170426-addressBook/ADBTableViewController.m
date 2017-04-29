@@ -31,7 +31,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.addressBook.addressBook.count;
+    return [self.addressBook count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -41,7 +41,7 @@
         cell = [[ADBCellTableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier: CBContactCellIdentifier];
     }
     
-    [(ADBCellTableViewCell *) cell addContact: [self.addressBook objectAtIndex: indexPath.row]];
+    [(ADBCellTableViewCell *) cell addContact: (ADBContact*) [self.addressBook objectAtIndexedSubscript: indexPath.row]];
     
     return cell;
 }

@@ -45,11 +45,15 @@ NSString *const CBContactCellIdentifier = @"CBContactCellIdentifier";
     // Configure the view for the selected state
 }
 
--(void) addContact: (NSArray *) contact {
-    self.firstNameLabel.text = contact[0];  //адов костыль
-    [self.firstNameLabel sizeToFit];
-    self.lastNameLabel.text = contact[1];   //из-за того что не заимплементили интерфейс адресбука как сказал Лёша
-    [self.lastNameLabel sizeToFit];
+-(void) addContact: (ADBContact *) contact {
+    
+    self.firstNameLabel.text = contact.firstName;
+    self.lastNameLabel.text = contact.lastName;
+    
+//    self.firstNameLabel.text = contact[0];  //адов костыль
+//    [self.firstNameLabel sizeToFit];
+//    self.lastNameLabel.text = contact[1];   //из-за того что не заимплементили интерфейс адресбука как сказал Лёша
+//    [self.lastNameLabel sizeToFit];
     //сюда надо дописать генерацию аватарки
 }
 
