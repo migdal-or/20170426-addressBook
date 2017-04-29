@@ -17,6 +17,7 @@
 		8439B1F41EB1252600C1FF89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8439B1F31EB1252600C1FF89 /* Assets.xcassets */; };
 		8439B2031EB1258000C1FF89 /* ADBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B2021EB1258000C1FF89 /* ADBViewController.m */; };
 		8439B2071EB1263800C1FF89 /* ADBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B2061EB1263800C1FF89 /* ADBTableViewController.m */; };
+		8448883F1EB518AF0021F827 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8448883A1EB511AA0021F827 /* Masonry.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		8439B2021EB1258000C1FF89 /* ADBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBViewController.m; sourceTree = "<group>"; };
 		8439B2051EB1263800C1FF89 /* ADBTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBTableViewController.h; sourceTree = "<group>"; };
 		8439B2061EB1263800C1FF89 /* ADBTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBTableViewController.m; sourceTree = "<group>"; };
+		8448883A1EB511AA0021F827 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Masonry.framework; path = Carthage/Build/iOS/Masonry.framework; sourceTree = "<group>"; };
+		8448883B1EB511AA0021F827 /* Masonry.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Masonry.framework.dSYM; path = Carthage/Build/iOS/Masonry.framework.dSYM; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8448883F1EB518AF0021F827 /* Masonry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +107,7 @@
 			children = (
 				8439B1E61EB1252600C1FF89 /* 20170426-addressBook */,
 				8439B1E51EB1252600C1FF89 /* Products */,
+				844888391EB511A90021F827 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,6 +180,15 @@
 			name = TableViewController;
 			sourceTree = "<group>";
 		};
+		844888391EB511A90021F827 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8448883A1EB511AA0021F827 /* Masonry.framework */,
+				8448883B1EB511AA0021F827 /* Masonry.framework.dSYM */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,6 +199,7 @@
 				8439B1E01EB1252600C1FF89 /* Sources */,
 				8439B1E11EB1252600C1FF89 /* Frameworks */,
 				8439B1E21EB1252600C1FF89 /* Resources */,
+				844888401EB518C00021F827 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -238,6 +253,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		844888401EB518C00021F827 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Masonry.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8439B1E01EB1252600C1FF89 /* Sources */ = {
@@ -355,6 +387,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "20170426-addressBook/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mz.-0170426-addressBook";
@@ -366,6 +402,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "20170426-addressBook/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mz.-0170426-addressBook";

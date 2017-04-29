@@ -15,9 +15,7 @@
 
 //@property (nonatomic, copy) NSMutableArray * addressBook;
 
--(instancetype) initWithArray: (NSMutableArray<ADBContact *> * ) start;
-//-(void) addContactToBook: (ADBContact*) contactToAdd;
-//-(ADBContact *) objectAtIndex: (NSUInteger) index;
+-(instancetype) initWithArray: (NSMutableArray *) starts;
 -(ADBContact *) objectAtIndexedSubscript: (NSUInteger) index;
 -(NSUInteger) count;
 

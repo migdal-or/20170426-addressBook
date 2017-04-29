@@ -10,6 +10,7 @@
 #import "ADBAddressBook.h"
 #import "ADBBookLoader.h"
 #import "ADBCellTableViewCell.h"
+@import Masonry;
 
 @interface ADBTableViewController ()
 

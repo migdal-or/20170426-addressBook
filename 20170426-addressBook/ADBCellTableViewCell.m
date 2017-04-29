@@ -9,6 +9,7 @@
 #import "ADBCellTableViewCell.h"
 #import "ADBContact.h"
 #import "ADBAvatar.h"
+@import Masonry;
 
 NSString *const CBContactCellIdentifier = @"CBContactCellIdentifier";
 
@@ -50,15 +51,25 @@ NSString *const CBContactCellIdentifier = @"CBContactCellIdentifier";
     self.firstNameLabel.text = contact.firstName;
     self.lastNameLabel.text = contact.lastName;
     
-//    self.firstNameLabel.text = contact[0];  //адов костыль
-//    [self.firstNameLabel sizeToFit];
-//    self.lastNameLabel.text = contact[1];   //из-за того что не заимплементили интерфейс адресбука как сказал Лёша
-//    [self.lastNameLabel sizeToFit];
+    [self.firstNameLabel sizeToFit];
+    [self.lastNameLabel sizeToFit];
+    
+    [self.firstNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo([[NSNumber alloc] initWithInt:0]);
+        make.left.equalTo([[NSNumber alloc] initWithInt:0]);
+    }];
+    
+    [self.lastNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.firstNameLabel.mas_bottom);
+        make.left.equalTo([[NSNumber alloc] initWithInt:0]);
+    }];
+    
+    
     //сюда надо дописать генерацию аватарки
 }
 
 + (CGFloat)heightForCell {
-    return 80;
+    return 10;
 }
 
 @end
