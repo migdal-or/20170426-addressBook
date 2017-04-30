@@ -20,6 +20,5 @@ extern NSString *const CBContactCellIdentifier;
 //@property(nonatomic, strong) UILabel *lastNameLabel;
 //@property(nonatomic, strong) ADBAvatar *avatarView;
 
--(void) addContact: (ADBContact *) contact;
-//+ (CGFloat)heightForCell;
+-(void) addContactToCell: (ADBContact *) contact thiscontact:(NSUInteger) numContact of:(NSUInteger) countContacts;
 @end

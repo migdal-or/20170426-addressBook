@@ -30,9 +30,6 @@
     return [self.addressBook count];
 }
 
-//-(void) addContactToBook: (ADBContact*) contactToAdd {
-//    [self.addressBook addObject: contactToAdd];
-//}
 
 - (ADBContact *)objectAtIndexedSubscript:(NSUInteger)index {
     return self.addressBook[index];

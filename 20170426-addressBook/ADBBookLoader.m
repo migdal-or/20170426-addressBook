@@ -13,10 +13,10 @@
 @implementation ADBBookLoader
 
 -(ADBAddressBook*) LoadContactsFromStub {
-//    ADBAddressBook *book = [ADBAddressBook new];
-    
     ADBContact * (^addContact)(NSString *, NSString *, NSString *, NSString *);
     addContact = ^ADBContact*(NSString *firstName, NSString *lastName, NSString *phoneNumber, NSString *email) {
+        
+        if (nil == firstName) { NSLog(@"Cannot import contact without first name!"); return nil; }
         ADBContact * newContact = [ADBContact new];
         newContact.firstName = firstName;
         newContact.lastName = lastName;
@@ -32,15 +32,6 @@
                               addContact(@"n5agheepoo",@"s5kothaeka",@"+84628799628",@""                           ) ];
     
     return [[ADBAddressBook alloc] initWithArray: stub];
-    
-    
-    //    [book addContactToBook: @[@"Mivaequi",@"Tiboigee",@"+86469496458",@"Mivaequi.Tiboigee@gmail.com"] ];
-    //    [book addContactToBook: @[@"phuwohdi",@"quinguos",@"+96896544346",@""                           ] ];
-    //    [book addContactToBook: @[@"ahpaeshe",@"eekonoog",@"",            @"eekonoog@ojohchau.edu"      ] ];
-    //    [book addContactToBook: @[@"uphohvak",@"soengaev",@"+29395987342",@"soengaev@ya.ru"             ] ];
-    //    [book addContactToBook: @[@"agheepoo",@"kothaeka",@"+84628799628",@""                           ] ];
-    //
-    //    return book;
-    
+
 }
 @end

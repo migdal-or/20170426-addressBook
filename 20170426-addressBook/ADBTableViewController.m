@@ -45,7 +45,7 @@
     NSUInteger cellRow = indexPath.row;
     ADBContact * contactToAdd = (ADBContact *) [self.addressBook objectAtIndexedSubscript: cellRow];
     
-    [(ADBCellTableViewCell *) cell addContact: (ADBContact *) contactToAdd];
+    [(ADBCellTableViewCell *) cell addContactToCell: (ADBContact *) contactToAdd thiscontact: cellRow of: self.addressBook.count];
     
     [cell layer].borderWidth = 1.0f;
     
@@ -53,7 +53,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 20*(1+indexPath.row);
+    return 50;
 }
 
 

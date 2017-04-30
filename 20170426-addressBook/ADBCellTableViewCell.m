@@ -6,10 +6,12 @@
 //  Copyright © 2017 Admin. All rights reserved.
 //
 
+#define AVATARAMARGIN 50
 #import "ADBCellTableViewCell.h"
 #import "ADBContact.h"
 #import "ADBAvatar.h"
 @import Masonry;
+#include "UIKit/UIKit.h"
 
 NSString *const CBContactCellIdentifier = @"CBContactCellIdentifier";
 
@@ -29,9 +31,7 @@ NSString *const CBContactCellIdentifier = @"CBContactCellIdentifier";
     _lastNameLabel = [UILabel new];
     _avatarView = [ADBAvatar new];
     
-    _firstNameLabel.frame = CGRectMake(30, 0, 50, 20);
-    _lastNameLabel.frame = CGRectMake(30, 25, 50, 50);
-    _avatarView.frame = CGRectMake(0, 0, 30, 50);
+//    _avatarView.frame = CGRectMake(0, 0, 30, 50);
 
     [self addSubview:_firstNameLabel];
     [self addSubview:_lastNameLabel];
@@ -46,7 +46,7 @@ NSString *const CBContactCellIdentifier = @"CBContactCellIdentifier";
     // Configure the view for the selected state
 }
 
--(void) addContact: (ADBContact *) contact {
+-(void) addContactToCell: (ADBContact *) contact thiscontact:(NSUInteger) numContact of:(NSUInteger) countContacts {
     
     self.firstNameLabel.text = contact.firstName;
     self.lastNameLabel.text = contact.lastName;
@@ -56,20 +56,31 @@ NSString *const CBContactCellIdentifier = @"CBContactCellIdentifier";
 
     [self.firstNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo([[NSNumber alloc] initWithInt:0]);
-        make.left.equalTo([[NSNumber alloc] initWithInt:0]);
+        make.left.equalTo([[NSNumber alloc] initWithInt:AVATARAMARGIN]);
     }];
     
     [self.lastNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.firstNameLabel.mas_bottom);
-        make.left.equalTo([[NSNumber alloc] initWithInt:0]);
+        make.left.equalTo([[NSNumber alloc] initWithInt:AVATARAMARGIN]);
     }];
     
     
     //сюда надо дописать генерацию аватарки
-}
-
-//+ (CGFloat)heightForCell {
-//    return 10;
-//}
+    UIColor * color;    color = [UIColor colorWithHue: [[NSNumber numberWithUnsignedInteger:numContact] floatValue]/[[NSNumber numberWithUnsignedInteger:countContacts] floatValue]
+                       saturation:1.0
+                       brightness:1.0
+                            alpha:1.0];
+//    _avatarView = [ADBAvatar new];
+    UILabel *circleWithText = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 50.0, 50.0)];
+//    NSLog(@"try1 %@, %@", contact.firstName, contact.lastName);
+    if ([contact.lastName isEqualToString:@""]) {
+        circleWithText.text = [NSString stringWithFormat:@"%c", [contact.firstName characterAtIndex:0]];
+    } else {
+        circleWithText.text = [NSString stringWithFormat:@"%c%c", [contact.firstName characterAtIndex:0], [contact.lastName characterAtIndex:0]];
+    }
+    circleWithText.backgroundColor = color;
+    [circleWithText setTextColor: [UIColor blackColor]];
+    [_avatarView addSubview: circleWithText];
+    }
 
 @end

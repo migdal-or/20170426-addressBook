@@ -10,8 +10,8 @@
 
 @interface ADBContact : NSObject
 
-@property (nonatomic, copy) NSString * firstName;
-@property (nonatomic, copy) NSString * lastName;
+@property (nonatomic, copy) NSString * firstName;   //should not be empty
+@property (nonatomic, copy) NSString * lastName;    //should not be empty
 @property (nonatomic, copy) NSString * phoneNumber;
 @property (nonatomic, copy) NSString * email;
 
