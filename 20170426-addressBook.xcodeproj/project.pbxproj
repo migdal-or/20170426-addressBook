@@ -13,6 +13,8 @@
 		04E156D01EB8F88700EEC0E1 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E156CC1EB8F88700EEC0E1 /* FBSDKCoreKit.framework */; };
 		04E156D11EB8F88700EEC0E1 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E156CD1EB8F88700EEC0E1 /* FBSDKLoginKit.framework */; };
 		04E156D21EB8F88700EEC0E1 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E156CE1EB8F88700EEC0E1 /* FBSDKShareKit.framework */; };
+		04E156D61EB8FF9000EEC0E1 /* ADBAuthorizationChoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E156D51EB8FF9000EEC0E1 /* ADBAuthorizationChoiceController.m */; };
+		04E156DA1EB9004E00EEC0E1 /* ADBVKAuthorizationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E156D91EB9004E00EEC0E1 /* ADBVKAuthorizationController.m */; };
 		84326FEF1EB227FD00DE207F /* ADBContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 84326FEE1EB227FD00DE207F /* ADBContact.m */; };
 		84326FF41EB2288C00DE207F /* ADBAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 84326FF31EB2288C00DE207F /* ADBAddressBook.m */; };
 		84326FF71EB22B7400DE207F /* ADBBookLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 84326FF61EB22B7400DE207F /* ADBBookLoader.m */; };
@@ -21,7 +23,6 @@
 		8439B1E91EB1252600C1FF89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B1E81EB1252600C1FF89 /* main.m */; };
 		8439B1EC1EB1252600C1FF89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B1EB1EB1252600C1FF89 /* AppDelegate.m */; };
 		8439B1F41EB1252600C1FF89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8439B1F31EB1252600C1FF89 /* Assets.xcassets */; };
-		8439B2031EB1258000C1FF89 /* ADBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B2021EB1258000C1FF89 /* ADBViewController.m */; };
 		8439B2071EB1263800C1FF89 /* ADBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8439B2061EB1263800C1FF89 /* ADBTableViewController.m */; };
 		8448883F1EB518AF0021F827 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8448883A1EB511AA0021F827 /* Masonry.framework */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,10 @@
 		04E156CC1EB8F88700EEC0E1 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../../Documents/FacebookSDKs-iOS-4/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		04E156CD1EB8F88700EEC0E1 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../../Documents/FacebookSDKs-iOS-4/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		04E156CE1EB8F88700EEC0E1 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../../Documents/FacebookSDKs-iOS-4/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		04E156D41EB8FF9000EEC0E1 /* ADBAuthorizationChoiceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBAuthorizationChoiceController.h; sourceTree = "<group>"; };
+		04E156D51EB8FF9000EEC0E1 /* ADBAuthorizationChoiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBAuthorizationChoiceController.m; sourceTree = "<group>"; };
+		04E156D81EB9004E00EEC0E1 /* ADBVKAuthorizationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBVKAuthorizationController.h; sourceTree = "<group>"; };
+		04E156D91EB9004E00EEC0E1 /* ADBVKAuthorizationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBVKAuthorizationController.m; sourceTree = "<group>"; };
 		84326FED1EB227FD00DE207F /* ADBContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBContact.h; sourceTree = "<group>"; };
 		84326FEE1EB227FD00DE207F /* ADBContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBContact.m; sourceTree = "<group>"; };
 		84326FF21EB2288C00DE207F /* ADBAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBAddressBook.h; sourceTree = "<group>"; };
@@ -51,8 +56,6 @@
 		8439B1EB1EB1252600C1FF89 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8439B1F31EB1252600C1FF89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8439B1F81EB1252600C1FF89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8439B2011EB1258000C1FF89 /* ADBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBViewController.h; sourceTree = "<group>"; };
-		8439B2021EB1258000C1FF89 /* ADBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBViewController.m; sourceTree = "<group>"; };
 		8439B2051EB1263800C1FF89 /* ADBTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBTableViewController.h; sourceTree = "<group>"; };
 		8439B2061EB1263800C1FF89 /* ADBTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBTableViewController.m; sourceTree = "<group>"; };
 		8448883A1EB511AA0021F827 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Masonry.framework; path = Carthage/Build/iOS/Masonry.framework; sourceTree = "<group>"; };
@@ -91,6 +94,24 @@
 				04E156C91EB8F5B300EEC0E1 /* ADBFbAuthorizationViewController.m */,
 			);
 			name = "Facebook Authorization View";
+			sourceTree = "<group>";
+		};
+		04E156D31EB8FF6900EEC0E1 /* Choose how to authorize Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04E156D41EB8FF9000EEC0E1 /* ADBAuthorizationChoiceController.h */,
+				04E156D51EB8FF9000EEC0E1 /* ADBAuthorizationChoiceController.m */,
+			);
+			name = "Choose how to authorize Controller";
+			sourceTree = "<group>";
+		};
+		04E156D71EB9003500EEC0E1 /* VK Authorization View */ = {
+			isa = PBXGroup;
+			children = (
+				04E156D81EB9004E00EEC0E1 /* ADBVKAuthorizationController.h */,
+				04E156D91EB9004E00EEC0E1 /* ADBVKAuthorizationController.m */,
+			);
+			name = "VK Authorization View";
 			sourceTree = "<group>";
 		};
 		84326FF01EB2286700DE207F /* Contact */ = {
@@ -191,22 +212,14 @@
 		8439B2001EB1255A00C1FF89 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04E156D71EB9003500EEC0E1 /* VK Authorization View */,
+				04E156D31EB8FF6900EEC0E1 /* Choose how to authorize Controller */,
 				04E156C71EB8F54F00EEC0E1 /* Facebook Authorization View */,
 				84326FFA1EB2371000DE207F /* Cell */,
 				84326FF91EB236FF00DE207F /* Avatar */,
-				8439B2041EB1260C00C1FF89 /* NavigationController */,
 				8439B2081EB1268B00C1FF89 /* TableViewController */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		8439B2041EB1260C00C1FF89 /* NavigationController */ = {
-			isa = PBXGroup;
-			children = (
-				8439B2011EB1258000C1FF89 /* ADBViewController.h */,
-				8439B2021EB1258000C1FF89 /* ADBViewController.m */,
-			);
-			name = NavigationController;
 			sourceTree = "<group>";
 		};
 		8439B2081EB1268B00C1FF89 /* TableViewController */ = {
@@ -320,14 +333,15 @@
 			files = (
 				8439B1EC1EB1252600C1FF89 /* AppDelegate.m in Sources */,
 				8439B2071EB1263800C1FF89 /* ADBTableViewController.m in Sources */,
+				04E156DA1EB9004E00EEC0E1 /* ADBVKAuthorizationController.m in Sources */,
 				8439B1E91EB1252600C1FF89 /* main.m in Sources */,
 				84326FFD1EB239BA00DE207F /* ADBCellTableViewCell.m in Sources */,
 				040C07DB1EB8ED3800DD96AC /* ADBVkToken.m in Sources */,
 				84326FF71EB22B7400DE207F /* ADBBookLoader.m in Sources */,
 				84326FEF1EB227FD00DE207F /* ADBContact.m in Sources */,
-				8439B2031EB1258000C1FF89 /* ADBViewController.m in Sources */,
 				04E156CA1EB8F5B300EEC0E1 /* ADBFbAuthorizationViewController.m in Sources */,
 				843270001EB23A4700DE207F /* ADBAvatar.m in Sources */,
+				04E156D61EB8FF9000EEC0E1 /* ADBAuthorizationChoiceController.m in Sources */,
 				84326FF41EB2288C00DE207F /* ADBAddressBook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

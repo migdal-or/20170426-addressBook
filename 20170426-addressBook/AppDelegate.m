@@ -7,9 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "ADBViewController.h"
 #import "ADBTableViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "ADBAuthorizationChoiceController.h"
 
 @interface AppDelegate ()
 
@@ -46,8 +46,12 @@
     UINavigationController *navigationController = [[UINavigationController alloc] init];
     UIWindow *window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     window.rootViewController = navigationController;
-    ADBTableViewController *tableVC = [ADBTableViewController new];
-    navigationController.viewControllers = @[tableVC];
+    
+//    ADBTableViewController *tableVC = [ADBTableViewController new];
+    ADBAuthorizationChoiceController *fbAuthorizationController = [ADBAuthorizationChoiceController new];
+    
+    navigationController.viewControllers = @[fbAuthorizationController];
+    
     self.window = window;
     [window makeKeyAndVisible];
 

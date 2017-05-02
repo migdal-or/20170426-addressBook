@@ -1,23 +1,22 @@
 //
-//  ADBFbAuthorizationViewController.m
+//  ADBVKAuthorizationController.m
 //  20170426-addressBook
 //
 //  Created by iOS-School-1 on 02/05/2017.
 //  Copyright © 2017 Admin. All rights reserved.
 //
 
-#import "ADBFbAuthorizationViewController.h"
+#import "ADBVKAuthorizationController.h"
 
-@interface ADBFbAuthorizationViewController ()
+@interface ADBVKAuthorizationController ()
+
 @end
 
-@implementation ADBFbAuthorizationViewController
+@implementation ADBVKAuthorizationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-
-    
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
