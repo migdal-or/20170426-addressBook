@@ -47,10 +47,10 @@
     UIWindow *window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     window.rootViewController = navigationController;
     
-//    ADBTableViewController *tableVC = [ADBTableViewController new];
-    ADBAuthorizationChoiceController *fbAuthorizationController = [ADBAuthorizationChoiceController new];
+    ADBTableViewController *tableVC = [ADBTableViewController new];
+//    ADBAuthorizationChoiceController *fbAuthorizationController = [ADBAuthorizationChoiceController new];
     
-    navigationController.viewControllers = @[fbAuthorizationController];
+    navigationController.viewControllers = @[tableVC];
     
     self.window = window;
     [window makeKeyAndVisible];
