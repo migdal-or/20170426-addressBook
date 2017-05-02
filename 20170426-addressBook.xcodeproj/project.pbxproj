@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040C07DB1EB8ED3800DD96AC /* ADBVkToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C07DA1EB8ED3800DD96AC /* ADBVkToken.m */; };
+		04E156CA1EB8F5B300EEC0E1 /* ADBFbAuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E156C91EB8F5B300EEC0E1 /* ADBFbAuthorizationViewController.m */; };
+		04E156CF1EB8F88700EEC0E1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E156CB1EB8F88700EEC0E1 /* Bolts.framework */; };
+		04E156D01EB8F88700EEC0E1 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E156CC1EB8F88700EEC0E1 /* FBSDKCoreKit.framework */; };
+		04E156D11EB8F88700EEC0E1 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E156CD1EB8F88700EEC0E1 /* FBSDKLoginKit.framework */; };
+		04E156D21EB8F88700EEC0E1 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E156CE1EB8F88700EEC0E1 /* FBSDKShareKit.framework */; };
 		84326FEF1EB227FD00DE207F /* ADBContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 84326FEE1EB227FD00DE207F /* ADBContact.m */; };
 		84326FF41EB2288C00DE207F /* ADBAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 84326FF31EB2288C00DE207F /* ADBAddressBook.m */; };
 		84326FF71EB22B7400DE207F /* ADBBookLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 84326FF61EB22B7400DE207F /* ADBBookLoader.m */; };
@@ -21,6 +27,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040C07D91EB8ED3800DD96AC /* ADBVkToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBVkToken.h; sourceTree = "<group>"; };
+		040C07DA1EB8ED3800DD96AC /* ADBVkToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBVkToken.m; sourceTree = "<group>"; };
+		04E156C81EB8F5B300EEC0E1 /* ADBFbAuthorizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBFbAuthorizationViewController.h; sourceTree = "<group>"; };
+		04E156C91EB8F5B300EEC0E1 /* ADBFbAuthorizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBFbAuthorizationViewController.m; sourceTree = "<group>"; };
+		04E156CB1EB8F88700EEC0E1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../../Documents/FacebookSDKs-iOS-4/Bolts.framework"; sourceTree = "<group>"; };
+		04E156CC1EB8F88700EEC0E1 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../../Documents/FacebookSDKs-iOS-4/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		04E156CD1EB8F88700EEC0E1 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../../Documents/FacebookSDKs-iOS-4/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		04E156CE1EB8F88700EEC0E1 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../../Documents/FacebookSDKs-iOS-4/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		84326FED1EB227FD00DE207F /* ADBContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBContact.h; sourceTree = "<group>"; };
 		84326FEE1EB227FD00DE207F /* ADBContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBContact.m; sourceTree = "<group>"; };
 		84326FF21EB2288C00DE207F /* ADBAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBAddressBook.h; sourceTree = "<group>"; };
@@ -51,12 +65,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				8448883F1EB518AF0021F827 /* Masonry.framework in Frameworks */,
+				04E156D01EB8F88700EEC0E1 /* FBSDKCoreKit.framework in Frameworks */,
+				04E156D21EB8F88700EEC0E1 /* FBSDKShareKit.framework in Frameworks */,
+				04E156D11EB8F88700EEC0E1 /* FBSDKLoginKit.framework in Frameworks */,
+				04E156CF1EB8F88700EEC0E1 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040C07D81EB8ED1700DD96AC /* VK Access Token */ = {
+			isa = PBXGroup;
+			children = (
+				040C07D91EB8ED3800DD96AC /* ADBVkToken.h */,
+				040C07DA1EB8ED3800DD96AC /* ADBVkToken.m */,
+			);
+			name = "VK Access Token";
+			sourceTree = "<group>";
+		};
+		04E156C71EB8F54F00EEC0E1 /* Facebook Authorization View */ = {
+			isa = PBXGroup;
+			children = (
+				04E156C81EB8F5B300EEC0E1 /* ADBFbAuthorizationViewController.h */,
+				04E156C91EB8F5B300EEC0E1 /* ADBFbAuthorizationViewController.m */,
+			);
+			name = "Facebook Authorization View";
+			sourceTree = "<group>";
+		};
 		84326FF01EB2286700DE207F /* Contact */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +180,7 @@
 		8439B1FE1EB1254C00C1FF89 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				040C07D81EB8ED1700DD96AC /* VK Access Token */,
 				84326FF81EB22C7E00DE207F /* Loader */,
 				84326FF11EB2286F00DE207F /* AddressBook */,
 				84326FF01EB2286700DE207F /* Contact */,
@@ -154,6 +191,7 @@
 		8439B2001EB1255A00C1FF89 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04E156C71EB8F54F00EEC0E1 /* Facebook Authorization View */,
 				84326FFA1EB2371000DE207F /* Cell */,
 				84326FF91EB236FF00DE207F /* Avatar */,
 				8439B2041EB1260C00C1FF89 /* NavigationController */,
@@ -185,6 +223,10 @@
 			children = (
 				8448883A1EB511AA0021F827 /* Masonry.framework */,
 				8448883B1EB511AA0021F827 /* Masonry.framework.dSYM */,
+				04E156CB1EB8F88700EEC0E1 /* Bolts.framework */,
+				04E156CC1EB8F88700EEC0E1 /* FBSDKCoreKit.framework */,
+				04E156CD1EB8F88700EEC0E1 /* FBSDKLoginKit.framework */,
+				04E156CE1EB8F88700EEC0E1 /* FBSDKShareKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -280,9 +322,11 @@
 				8439B2071EB1263800C1FF89 /* ADBTableViewController.m in Sources */,
 				8439B1E91EB1252600C1FF89 /* main.m in Sources */,
 				84326FFD1EB239BA00DE207F /* ADBCellTableViewCell.m in Sources */,
+				040C07DB1EB8ED3800DD96AC /* ADBVkToken.m in Sources */,
 				84326FF71EB22B7400DE207F /* ADBBookLoader.m in Sources */,
 				84326FEF1EB227FD00DE207F /* ADBContact.m in Sources */,
 				8439B2031EB1258000C1FF89 /* ADBViewController.m in Sources */,
+				04E156CA1EB8F5B300EEC0E1 /* ADBFbAuthorizationViewController.m in Sources */,
 				843270001EB23A4700DE207F /* ADBAvatar.m in Sources */,
 				84326FF41EB2288C00DE207F /* ADBAddressBook.m in Sources */,
 			);
@@ -318,6 +362,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "~/Documents/FacebookSDKs-iOS-4";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -332,7 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -367,6 +412,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "~/Documents/FacebookSDKs-iOS-4";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -375,7 +421,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -387,11 +433,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "20170426-addressBook/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mz.-0170426-addressBook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -402,11 +450,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "20170426-addressBook/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mz.-0170426-addressBook";
 				PRODUCT_NAME = "$(TARGET_NAME)";

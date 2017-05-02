@@ -15,12 +15,16 @@
 @interface ADBTableViewController ()
 
 @property (nonatomic, strong) ADBAddressBook* addressBook;
+
 @end
 
 @implementation ADBTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // segment control
+    // uiseg
     
     self.addressBook = [[ADBBookLoader new] LoadContactsFromStub];
     self.tableView.delegate = self;

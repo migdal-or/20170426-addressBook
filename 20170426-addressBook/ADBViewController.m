@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     ADBTableViewController *tableVC = [ADBTableViewController new];
     self.viewControllers = @[tableVC];
 }

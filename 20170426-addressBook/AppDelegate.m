@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ADBViewController.h"
+#import "ADBTableViewController.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 @interface AppDelegate ()
 
@@ -15,14 +17,40 @@
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
     
-    ADBViewController *navigationController = [[ADBViewController alloc] init];
+    BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                                  openURL:url
+                                                        sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                                               annotation:options[UIApplicationOpenURLOptionsAnnotationKey]
+                    ];
+    // Add any custom logic here.
+    return handled;
+}
+
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[FBSDKApplicationDelegate sharedInstance] application:application
+                             didFinishLaunchingWithOptions:launchOptions];
+    
+    
+    //    ADBViewController *navigationController = [[ADBViewController alloc] init];
+    //    UIWindow *window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    //    window.rootViewController = navigationController;
+    //    self.window = window;
+    //    [window makeKeyAndVisible];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] init];
     UIWindow *window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     window.rootViewController = navigationController;
-    self.window = window; 
+    ADBTableViewController *tableVC = [ADBTableViewController new];
+    navigationController.viewControllers = @[tableVC];
+    self.window = window;
     [window makeKeyAndVisible];
-    
+
     return YES;
 }
 

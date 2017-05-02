@@ -44,4 +44,9 @@
     return [[ADBAddressBook alloc] initWithArray: stub];
 
 }
+
+-(ADBAddressBook*) LoadContactsFromFacebook {
+    return @[];
+}
+
 @end
