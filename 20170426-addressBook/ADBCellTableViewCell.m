@@ -47,40 +47,36 @@ NSString *const CBContactCellIdentifier = @"CBContactCellIdentifier";
 }
 
 -(void) addContactToCell: (ADBContact *) contact thiscontact:(NSUInteger) numContact of:(NSUInteger) countContacts {
-    
     self.firstNameLabel.text = contact.firstName;
-    self.lastNameLabel.text = contact.lastName;
-    
     [self.firstNameLabel sizeToFit];
-    [self.lastNameLabel sizeToFit];
-
     [self.firstNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo([[NSNumber alloc] initWithInt:0]);
         make.left.equalTo([[NSNumber alloc] initWithInt:AVATARAMARGIN]);
     }];
-    
+
+    self.lastNameLabel.text = contact.lastName;
+    [self.lastNameLabel sizeToFit];
     [self.lastNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.firstNameLabel.mas_bottom);
         make.left.equalTo([[NSNumber alloc] initWithInt:AVATARAMARGIN]);
     }];
     
+    //генерация аватарки
+    UIColor * color;
+    color = [UIColor colorWithHue: [[NSNumber numberWithUnsignedInteger:numContact] floatValue]/[[NSNumber numberWithUnsignedInteger:countContacts] floatValue] saturation:1.0 brightness:1.0 alpha:1.0];
     
-    //сюда надо дописать генерацию аватарки
-    UIColor * color;    color = [UIColor colorWithHue: [[NSNumber numberWithUnsignedInteger:numContact] floatValue]/[[NSNumber numberWithUnsignedInteger:countContacts] floatValue]
-                       saturation:1.0
-                       brightness:1.0
-                            alpha:1.0];
-//    _avatarView = [ADBAvatar new];
     UILabel *circleWithText = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 50.0, 50.0)];
-//    NSLog(@"try1 %@, %@", contact.firstName, contact.lastName);
     if ([contact.lastName isEqualToString:@""]) {
         circleWithText.text = [NSString stringWithFormat:@"%c", [contact.firstName characterAtIndex:0]];
     } else {
         circleWithText.text = [NSString stringWithFormat:@"%c%c", [contact.firstName characterAtIndex:0], [contact.lastName characterAtIndex:0]];
     }
     circleWithText.backgroundColor = color;
+    circleWithText.textAlignment = NSTextAlignmentCenter;
+    circleWithText.layer.masksToBounds = YES;
+    circleWithText.layer.cornerRadius = CGRectGetWidth(circleWithText.frame)/2;
     [circleWithText setTextColor: [UIColor blackColor]];
     [_avatarView addSubview: circleWithText];
-    }
+}
 
 @end
