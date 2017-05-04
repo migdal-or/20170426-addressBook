@@ -10,4 +10,6 @@
 
 @interface ADBTableViewController : UITableViewController
 
+- (void)loadFromFacebookButton;
+- (void)segmentedValueChanged:(UISegmentedControl *)segment;
 @end

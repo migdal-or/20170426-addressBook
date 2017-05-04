@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "ADBTableViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import "ADBAuthorizationChoiceController.h"
 
 @interface AppDelegate ()
 
@@ -36,19 +35,11 @@
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
     
-    
-    //    ADBViewController *navigationController = [[ADBViewController alloc] init];
-    //    UIWindow *window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    //    window.rootViewController = navigationController;
-    //    self.window = window;
-    //    [window makeKeyAndVisible];
-    
     UINavigationController *navigationController = [[UINavigationController alloc] init];
     UIWindow *window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     window.rootViewController = navigationController;
     
     ADBTableViewController *tableVC = [ADBTableViewController new];
-//    ADBAuthorizationChoiceController *fbAuthorizationController = [ADBAuthorizationChoiceController new];
     
     navigationController.viewControllers = @[tableVC];
     

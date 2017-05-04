@@ -24,7 +24,6 @@
         newContact.email = email;
         return newContact;
     };
-    
     NSArray* stub = @[ addContact(@"n1Mivaequi",@"s1Tiboigee",@"+86469496458",@"Mivaequi.Tiboigee@gmail.com"),
                               addContact(@"n2phuwohdi",@"s2quinguos",@"+96896544346",@""                           ),
                               addContact(@"n3ahpaeshe",@"s3eekonoog",@"",            @"eekonoog@ojohchau.edu"      ),
@@ -42,10 +41,14 @@
                        addContact(@"n5agheepoo",@"s5kothaeka",@"+84628799628",@""                           ) ];
     
     return [[ADBAddressBook alloc] initWithArray: stub];
+}
 
+-(ADBAddressBook*) LoadContactsFromVK: (NSString *) vkToken {
+    return nil;
 }
 
 -(ADBAddressBook*) LoadContactsFromFacebook {
+    
     return @[];
 }
 

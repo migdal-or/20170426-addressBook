@@ -12,5 +12,6 @@
 @interface ADBBookLoader : NSObject
 
 -(ADBAddressBook*) LoadContactsFromStub;
-
+-(ADBAddressBook*) LoadContactsFromVK;
+-(ADBAddressBook*) LoadContactsFromFacebook;
 @end

@@ -17,7 +17,7 @@
 
 @interface ADBTableViewController ()
 
-@property (nonatomic, strong) FBSDKButton *loginButton;
+@property (nonatomic, strong) FBSDKLoginButton *loginButton;
 @property (nonatomic, strong) UIButton *loadFromFacebook;
 @property (nonatomic, strong) ADBAddressBook* addressBook;
 
@@ -27,45 +27,76 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // segment control
-    // uiseg
-    
-    UISegmentedControl *segmentedController = [[UISegmentedControl alloc] initWithItems: @[ @"facebookAuth", @"vkAuth" ] ];
-    segmentedController.frame = CGRectMake(0, 60, self.view.bounds.size.width, 40);
-    [segmentedController addTarget:self action:@selector(segmentedValueChanged:) forControlEvents:UIControlEventValueChanged];
-    segmentedController.selectedSegmentIndex = 0;
-    [self.view addSubview:segmentedController];
-    
-    _loginButton = [[FBSDKLoginButton alloc] init];
-//    _loginButton.center = self.view.center;
-    _loginButton.frame = CGRectMake(0, self.view.bounds.size.height / 2, 100, 100);
-    [_loginButton sizeToFit];
-//    _loginButton.hidden = YES;    // works in a strange way?
-    [self.view addSubview:_loginButton];
-    
-    _loadFromFacebook = [UIButton new];
-    [_loadFromFacebook setTitle:@"Load" forState:UIControlStateNormal]; // does not appear?
-    [_loadFromFacebook sizeToFit];
-    _loadFromFacebook.frame = CGRectMake(10, 60 + self.view.bounds.size.height / 2, 50, 50);
-    _loadFromFacebook.backgroundColor = [UIColor redColor];
-//    [_loadFromFacebook mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.loginButton.mas_bottom).with.offset(30);
-//        make.left.equalTo(self.loginButton.mas_left);
-//    }];
-//    [NSLayoutConstraint activateConstraints:self.view.constraints];
 
-    [self.view addSubview:_loadFromFacebook];
-    
 //    self.addressBook = [[ADBBookLoader new] LoadContactsFromStub];
 //    self.tableView.delegate = self;
 //    self.tableView.dataSource = self;
 //    
 //    [self.tableView registerClass:[ADBCellTableViewCell class] forCellReuseIdentifier:	CBContactCellIdentifier];
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    UIView *authorizationLoadView = [UIView new];
+    authorizationLoadView.frame = CGRectMake(20, 60, self.view.bounds.size.width - 40, 200);
+    authorizationLoadView.backgroundColor = [UIColor colorWithRed:225.0/255 green:225.0/255 blue:225.0/255 alpha:1];
+    [self.view addSubview:authorizationLoadView];
+    
+    UISegmentedControl *segmentedController = [[UISegmentedControl alloc] initWithItems: @[ @"facebookAuth", @"vkAuth" ] ];
+    segmentedController.frame = CGRectMake(0, 0, authorizationLoadView.bounds.size.width, 40);
+    segmentedController.backgroundColor = [UIColor colorWithRed:200.0/255 green:200.0/255 blue:200.0/255 alpha:1];
+    [segmentedController addTarget:self action:@selector(segmentedValueChanged:) forControlEvents:UIControlEventValueChanged];
+    segmentedController.selectedSegmentIndex = 0;
+    [authorizationLoadView addSubview:segmentedController];
+    
+    _loginButton = [[FBSDKLoginButton alloc] init];
+    _loginButton.delegate = self;
+    _loginButton.frame = CGRectMake(50, 40, 30, 30);
+    [_loginButton sizeToFit];
+//    [_loginButton addTarget:self action:@selector(checkLoggedIn) forControlEvents:UIControlEventTouchUpInside];
+    [authorizationLoadView addSubview:_loginButton];
+    
+    _loadFromFacebook = [UIButton new];
+    [_loadFromFacebook setTitle:@"Load" forState:UIControlStateNormal];
+    if ([FBSDKAccessToken currentAccessToken]) {
+        _loadFromFacebook.hidden = NO;
+    } else {
+        _loadFromFacebook.hidden = YES;
+    }
+    _loadFromFacebook.frame = CGRectMake(120, 40, 30, 30);
+    [_loadFromFacebook sizeToFit];
+    _loadFromFacebook.backgroundColor = [UIColor redColor];
+    [_loadFromFacebook addTarget:self action:@selector(loadFromFacebookButton) forControlEvents:UIControlEventTouchUpInside];
+    [authorizationLoadView addSubview:_loadFromFacebook];
+}
+
+- (void)loginButton:(FBSDKLoginButton *)loginButton didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result error:(NSError *)error{
+    if ([FBSDKAccessToken currentAccessToken]) {
+        _loadFromFacebook.hidden = NO;
+    } else {
+        _loadFromFacebook.hidden = YES;
+    }
+}
+
+-(void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton{
+//    NSLog(@"logged out");
+//    if ([FBSDKAccessToken currentAccessToken]) {
+//        _loadFromFacebook.hidden = NO;
+//    } else {
+        _loadFromFacebook.hidden = YES;
+//    }
+}
+
+
+- (void)loadFromFacebookButton {
+    NSLog(@"touched load");
 }
 
 - (void)segmentedValueChanged:(UISegmentedControl *)segment {
-    
     if(segment.selectedSegmentIndex == 0) {
         // открыли вкладку facebook
         _loginButton.hidden = NO;
@@ -78,7 +109,8 @@
     } else if (segment.selectedSegmentIndex == 1) {
         //открыли вкладку vk
         _loginButton.hidden = YES;
-        //        NSLog(@"vk.com");
+        _loadFromFacebook.hidden = YES;
+     //        NSLog(@"vk.com");
     }
     
 }
@@ -106,9 +138,9 @@
     return cell;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 50;
-}
+//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return 50;
+//}
 
 
 @end
