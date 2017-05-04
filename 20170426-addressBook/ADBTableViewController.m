@@ -52,12 +52,11 @@
     [segmentedController addTarget:self action:@selector(segmentedValueChanged:) forControlEvents:UIControlEventValueChanged];
     segmentedController.selectedSegmentIndex = 0;
     [authorizationLoadView addSubview:segmentedController];
-    
+
     _loginButton = [[FBSDKLoginButton alloc] init];
     _loginButton.delegate = self;
     _loginButton.frame = CGRectMake(50, 40, 30, 30);
     [_loginButton sizeToFit];
-//    [_loginButton addTarget:self action:@selector(checkLoggedIn) forControlEvents:UIControlEventTouchUpInside];
     [authorizationLoadView addSubview:_loginButton];
     
     _loadFromFacebook = [UIButton new];
@@ -83,17 +82,37 @@
 }
 
 -(void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton{
-//    NSLog(@"logged out");
-//    if ([FBSDKAccessToken currentAccessToken]) {
-//        _loadFromFacebook.hidden = NO;
-//    } else {
-        _loadFromFacebook.hidden = YES;
-//    }
+    _loadFromFacebook.hidden = YES;
 }
 
 
 - (void)loadFromFacebookButton {
     NSLog(@"touched load");
+    // For more complex open graph stories, use `FBSDKShareAPI`
+    // with `FBSDKShareOpenGraphContent`
+    /* make the API call */
+    FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
+                                  initWithGraphPath:@"/{user-id}/taggable_friends"
+                                  parameters:nil
+                                  HTTPMethod:@"GET"];
+    [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
+                                          id result,
+                                          NSError *error) {
+        NSLog(@"User ID : %@",[result valueForKey:@"id"]);
+        NSLog(@"User Name : %@",[result valueForKey:@"name"]);
+        NSLog(@"User First Name :%@",[result valueForKey:@"first_name"]);
+        NSLog(@"User Last Name :%@",[result valueForKey:@"last_name"]);
+        NSLog(@"USER Email is :%@",[result valueForKey:@"email"]);
+        NSLog(@"User fb_Link : %@",[result valueForKey:@"link"]);
+        NSLog(@"User Birthday : %@",[result valueForKey:@"birthday"]);
+        NSLog(@"FB Profile Photo Link :%@",[[[result valueForKey:@"picture"]objectForKey:@"data"]objectForKey:@"url"]);
+        NSLog(@"User total friends : %@",[[[result valueForKey:@"friends"]objectForKey:@"summary"]valueForKey:@"total_count"]);
+        NSLog(@"User Gender : %@",[result valueForKey:@"gender"]);
+        NSLog(@"User age_range : %@",[[result valueForKey:@"age_range"]objectForKey:@"min"]);
+        NSLog(@"User cover Photo Link : %@",[[result valueForKey:@"cover"]objectForKey:@"source"]);
+
+    }];
+    
 }
 
 - (void)segmentedValueChanged:(UISegmentedControl *)segment {
